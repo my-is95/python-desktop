@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="utf-8">
+		<title>AIO Bot</title>
+		<!-- <meta name="description" content="サイトキャプションを入力">
+		<meta name="keywords" content="サイトキーワードを,で区切って入力"> -->
+        <!-- CSS only -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+        <script src="https://kit.fontawesome.com/367a23922a.js" crossorigin="anonymous"></script>
+        
+		<link rel="stylesheet" href="css/main.css">
+		<!--[if lt IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+		<![endif]-->
+        <!-- <script src="sample.js"></script> -->
+	</head>
+
+	<body>
+		<!----- ヘッダー ----->
+		<!-- <header>ヘッダー</header> -->
+		<!-- <nav>ナビ</nav> -->
+		<!----- ヘッダー END ----->
+		
+		<!----- メインコンテンツ ----->
+		<div class="tab-wrap">
+            <input id="TAB-01" type="radio" name="TAB" class="tab-switch" checked="checked" /><label class="tab-label" for="TAB-01">Profile</label>
+            <div class="tab-content">
+                <div class="button_container">
+                    <table>
+                        <tr>
+                        <td><button id="add_billing_btn">Add Billing</button></i></td>
+                        <td><button id="remove_billing_btn">Remove All</button></td>
+                        </tr>
+                    </table>
+                </div>
+                <!-- 登録されているProfileの一覧を表示 -->
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">Profile Name</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Email</th>
+                            <th scope="col"></th>
+                        </tr>
+                    </thead>
+                    <!-- ここにHTMLが追加されていく -->
+                    <tbody id=add_billing_tbody>
+                    </tbody>
+                </table>
+            </div>
+            <input id="TAB-02" type="radio" name="TAB" class="tab-switch" /><label class="tab-label" for="TAB-02">Proxy</label>
+            <div class="tab-content">
+                コンテンツ 2
+            </div>
+            <input id="TAB-03" type="radio" name="TAB" class="tab-switch" /><label class="tab-label" for="TAB-03">Task</label>
+            <div class="tab-content">
+                コンテンツ 3
+            </div>
+        </div>
+        <!-- Profileを入力する際に表示されるモーダル画面のHTML -->
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <section id="form">
+                        <input type="hidden" name="profile_id" value="" />
+                        <div>
+                            <label>Profile Name</label><br>
+                            <input type="text" name="profile_name" maxlength="20" value="" placeholder="20文字以内で入力">
+                        </div>
+                        <div>
+                            <label>Name</label><br>
+                            <input type="text" name="name" maxlength="20" value="" placeholder="プルコギ 太郎">
+                        </div>
+                        <div>
+                            <label>Email</label><br>
+                            <input type="text" name="email" value="" placeholder="xxxxxxx@gmail.com">
+                        </div>
+                    </section>
+                    <input type="button" id="registerBtn" value="OK">
+                    <input type="button" id="closeBtn" value="閉じる">
+                </div>
+            </div>
+        </div>
+		<!----- メインコンテンツ END ----->
+		
+		<!----- フッター ----->
+		<footer></footer>
+		<!----- フッター END ----->
+	</body>
+    <script type="text/javascript" src="/eel.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+</html>
